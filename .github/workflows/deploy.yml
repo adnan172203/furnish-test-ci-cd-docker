@@ -1,0 +1,17 @@
+name: Furnish Docker Application
+
+on:
+  push:
+    branches:[master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Furnish Docker Dependencies
+        run:  npm install
+
+      - name : Run the tests
+        run:   npm test

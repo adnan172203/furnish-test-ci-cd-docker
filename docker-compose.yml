@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  frontend:
+    build: ./client
+    ports:
+      - 3000:3000
+  backend:
+    build: ./
+    ports:
+      - 5000:5000
+    environment:
+      DB_URL: mongodb://database/furnish-docker  
+  database:
+    image: mongo:4.0-xenial
+    ports:
+      - 27017:27017
+    volumes:
+      - furnish-docker:/data/db
+volumes:
+  furnish-docker:
