@@ -2,7 +2,8 @@ name: Furnish Docker Application
 
 on:
   push:
-    branches:[master]
+    branches: [master]
+
 
 jobs:
   build:
