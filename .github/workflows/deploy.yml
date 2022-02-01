@@ -14,5 +14,8 @@ jobs:
       - name: Install Furnish Docker Dependencies
         run:  npm install
 
-      - name : Run the tests
-        run:   npm test
+      - name : Install client dependencies
+        run:
+          cd client
+          npm install
+          npm run test
