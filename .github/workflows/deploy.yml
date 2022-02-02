@@ -13,3 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Furnish Docker Dependencies
         run:  npm install
+
+      - name: install client dependency
+        run: cd client
+             npm install
