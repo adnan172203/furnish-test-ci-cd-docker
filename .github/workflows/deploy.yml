@@ -15,5 +15,4 @@ jobs:
         run:  npm install
 
       - name: install client dependency
-        run: cd ./client
-             npm install
+        run: cd ./client && npm install && npm test
